@@ -58,6 +58,51 @@ namespace GYM_Training_Program.Repository
             }
             return programList;
         }
-        
+
+        public TrainingProgramResponseDTO GetTrainingProgramById(string ProgramId)
+        {
+            using (var connection = new SqlConnection(_connectionstring))
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = "SELECT * FROM TrainingProgram WHERE Id == @id";
+                command.Parameters.AddWithValue("@id", ProgramId);
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        var trainingProgramOBJ = new TrainingProgramResponseDTO()
+                        {
+                            Id = reader.GetString(0),
+                            MemberId = reader.GetString(1),
+                            Cardio = reader.GetString(2),
+                            WeightTraining = reader.GetString(3),
+                        };
+                    }
+                    else
+                    {
+                        throw new Exception("Course Not Found!");
+                    }
+                };
+            };
+            return null;
+        }
+
+        public void UpdateProgram(string ProgramId)
+        {
+
+           
+                using (var connection = new SqlConnection(_connectionstring))
+                {
+                    connection.Open();
+                    var command = connection.CreateCommand();
+                    command.CommandText = "UPDATE TrainingProgram SET  WHERE Id == @id";
+                    command.Parameters.AddWithValue("@id", ProgramId);
+                     
+                    command.ExecuteNonQuery();
+                }
+           
+
+        }
     }
 }

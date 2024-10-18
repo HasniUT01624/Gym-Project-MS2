@@ -32,5 +32,35 @@ namespace GYM_Training_Program.Controllers
             var TrainingProgramsList = _trainingProgramRepository.GetAllTrainingProgram();
             return Ok(TrainingProgramsList);
         }
+
+        [HttpGet("Get-TrainingProgram-By-ID /{ProgramId}")]
+
+        public IActionResult  GetTrainingProgramById(string ProgramId)
+        {
+           try
+           {
+               var Program = _trainingProgramRepository.GetTrainingProgramById(ProgramId);
+               return Ok(Program);
+           }
+           catch (Exception ex)
+           {
+               return BadRequest(ex.Message);
+           }
+        }
+
+        [HttpPut("Update-Program/{ProgramId}")]
+
+        public IActionResult UpdateProgram(string ProgramId)
+        {
+            try
+            {
+                _trainingProgramRepository.UpdateProgram(ProgramId);
+                return Ok("Program Updated Successfully.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

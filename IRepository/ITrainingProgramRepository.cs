@@ -7,5 +7,7 @@ namespace GYM_Training_Program.IRepository
     {
         void AddTrainingProgram(TrainingProgramRequestDTO request);
         ICollection<TrainingProgramResponseDTO> GetAllTrainingProgram();
+        TrainingProgramResponseDTO GetTrainingProgramById(string ProgramId);
+        void UpdateProgram(string ProgramId);
     }
 }

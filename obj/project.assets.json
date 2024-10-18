@@ -2104,19 +2104,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\UT01624\\.nuget\\packages\\": {}
+    "C:\\Users\\Inspiron_15\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UT01624\\Desktop\\GYM_Training_Program\\GYM_Training_Program.csproj",
+      "projectUniqueName": "C:\\Users\\Inspiron_15\\Downloads\\GYM_Training_Program\\GYM_Training_Program.csproj",
       "projectName": "GYM_Training_Program",
-      "projectPath": "C:\\Users\\UT01624\\Desktop\\GYM_Training_Program\\GYM_Training_Program.csproj",
-      "packagesPath": "C:\\Users\\UT01624\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UT01624\\Desktop\\GYM_Training_Program\\obj\\",
+      "projectPath": "C:\\Users\\Inspiron_15\\Downloads\\GYM_Training_Program\\GYM_Training_Program.csproj",
+      "packagesPath": "C:\\Users\\Inspiron_15\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Inspiron_15\\Downloads\\GYM_Training_Program\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\UT01624\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Inspiron_15\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
